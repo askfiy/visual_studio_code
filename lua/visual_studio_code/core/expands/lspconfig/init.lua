@@ -3,13 +3,6 @@ local M = {}
 ---@diagnostic disable-next-line: unused-local
 function M.get_highlight(conf, colors)
     return {
-        -- lspinfo
-        LspInfoBorder = { fg = colors.__vscode_lsp_info },
-        LspSignatureActiveParameter = {
-            fg = colors.__vscode_wrapper_blue,
-            bold = true,
-        },
-        -- nvim diagnostic
         DiagnosticError = { fg = colors.__vscode_lsp_error },
         DiagnosticWarn = { fg = colors.__vscode_lsp_warn },
         DiagnosticInfo = { fg = colors.__vscode_lsp_info },
@@ -30,6 +23,8 @@ function M.get_highlight(conf, colors)
         DiagnosticUnderlineWarn = { underline = true, sp = colors.__vscode_lsp_warn },
         DiagnosticUnderlineInformation = { underline = true, sp = colors.__vscode_lsp_info },
         DiagnosticUnderlineHint = { underline = true, sp = colors.__vscode_lsp_hint },
+        LspInfoBorder = { fg = colors.__vscode_lsp_info },
+        LspSignatureActiveParameter = { fg = colors.__vscode_extra_decorate_color, bold = true },
     }
 end
 

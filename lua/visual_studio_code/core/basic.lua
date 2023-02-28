@@ -35,7 +35,7 @@ function M.get_syntax_highlight(conf, colors)
         SpecialComment = { link = "Comment" },
         Debug = { fg = colors.__vscode_keyword },
         Underlined = { fg = colors.__vscode_number },
-        Ignore = { fg = colors.__vscode_editor_nontext_foreground },
+        Ignore = { fg = colors.__vscode_nontext_foreground },
         Error = { fg = colors.__vscode_variable },
         Todo = { fg = colors.__vscode_todo_foreground, bg = colors.__vscode_todo_background },
     }
@@ -44,184 +44,62 @@ end
 ---@diagnostic disable-next-line: unused-local
 function M.get_viml_highlight(conf, colors)
     return {
-        Normal = {
-            fg = colors.__vscode_foreground,
-            bg = colors.__vscode_background,
-        },
-        NormalFloat = {
-            fg = colors.__vscode_foreground,
-            bg = colors.__vscode_editor_background,
-        },
-        Visual = {
-            bg = colors.__vscode_editor_selectionBackground,
-        },
-        MatchParen = {
-            bold = true,
-        },
-        CursorLine = {
-            bg = colors.__vscode_list_inactiveSelectionBackground,
-        },
-        CursorColumn = {
-            link = "CursorLine",
-        },
-        ColorColumn = {
-            link = "CursorLine",
-        },
-        Folded = {
-            bg = colors.__vscode_editor_foldBackground,
-        },
-        CursorLineNr = {
-            fg = colors.__vscode_editorLineNumber_activeForeground,
-        },
-        CursorLineSign = {
-            link = "CursorLineNr",
-        },
-        CursorLineFold = {
-            link = "CursorLineNr",
-        },
-        LineNr = {
-            fg = colors.__vscode_editorLineNumber_foreground,
-        },
-        SignColumn = {
-            link = "LinNr",
-        },
-        FoldColumn = {
-            link = "LinNr",
-        },
-        MsgArea = {
-            fg = colors.__vscode_variable,
-        },
-        ModeMsg = {
-            link = "MsgArea",
-        },
-        MoreMsg = {
-            link = "ModeMsg",
-        },
-        Question = {
-            fg = colors.__vscode_wrapper_blue,
-            bold = true,
-        },
-        WarningMsg = {
-            fg = colors.__vscode_lsp_warn,
-        },
-        ErrorMsg = {
-            fg = colors.__vscode_lsp_error,
-        },
-        MsgSeparator = {
-            bg = colors.__vscode_editor_background,
-        },
-        QuickFixLine = {
-            link = "ErrorMsg",
-        },
-        DiffAdd = {
-            fg = colors.__vscode_diff_add,
-        },
-        DiffChange = {
-            fg = colors.__vscode_diff_change,
-        },
-        DiffDelete = {
-            fg = colors.__vscode_diff_del,
-        },
-        DiffText = {
-            fg = colors.__vscode_diff_text_foreground,
-            bg = colors.__vscode_diff_text_background,
-        },
-        NonText = {
-            fg = colors.__vscode_editor_nontext_foreground,
-        },
-        Conceal = {
-            link = "NonText",
-        },
-        WinSeparator = {
-            fg = colors.__vscode_window_separator,
-            bold = true,
-        },
-        Whitespace = {
-            link = "NonText",
-        },
-        Menu = {
-            link = "NormalFloat",
-        },
-        Pmenu = {
-            link = "NormalFloat",
-        },
-        PmenuSel = {
-            bg = colors.__vscode_editor_menu_selected_background,
-        },
-        PmenuSbar = {
-            bg = colors.__vscode_editor_background,
-        },
-        PmenuThumb = {
-            bg = colors.__vscode_editor_completion_scrollview_background,
-        },
-        TabLineFill = {
-            fg = colors.__vscode_foreground,
-            bg = colors.__vscode_editor_background,
-        },
-        TabLine = {
-            fg = colors.__vscode_other_table_background,
-            bg = colors.__vscode_editor_background,
-        },
-        TabLineSel = {
-            fg = colors.__vscode_foreground,
-        },
-        SpellBad = {
-            sp = colors.__vscode_lsp_error,
-            undercurl = true,
-        },
-        SpellCap = {
-            sp = colors.__vscode_lsp_warn,
-            undercurl = true,
-        },
-        SpellLocal = {
-            sp = colors.__vscode_lsp_info,
-            undercurl = true,
-        },
-        SpellRare = {
-            sp = colors.__vscode_head,
-            undercurl = true,
-        },
-        Search = {
-            bg = colors.__vscode_replace_mode_background,
-        },
-        CurSearch = {
-            bg = colors.__vscode_replace_mode_background,
-        },
-        IncSearch = {
-            bg = colors.__vscode_replace_mode_background,
-        },
-        Substitute = {
-            bg = colors.__vscode_replace_mode_background,
-            bold = true,
-        },
-        Directory = {
-            fg = colors.__vscode_wrapper_blue,
-            bg = colors.__vscode_editor_background,
-            bold = true,
-        },
-        Title = {
-            fg = colors.__vscode_wrapper_blue,
-            bold = true,
-        },
-        Winbar = {
-            fg = colors.__vscode_variable,
-        },
-        Scrollbar = {
-            bg = colors.__vscode_editor_completion_scrollview_background,
-        },
-        StatusLine = {
-            fg = colors.__vscode_statusline_foreground,
-            bg = colors.__vscode_statusline_background,
-        },
-        StatusLineNC = {
-            bg = colors.__vscode_statusline_background,
-        },
-        SpecialKey = {
-            fg = colors.__vscode_wrapper_blue,
-        },
+        Normal = { fg = colors.__vscode_foreground, bg = colors.__vscode_background },
+        NormalFloat = { fg = colors.__vscode_foreground, bg = colors.__vscode_local_background },
+        Visual = { bg = colors.__vscode_visual_color },
+        MatchParen = { bold = true },
+        CursorLine = { bg = colors.__vscode_onaction_cursor_line_background },
+        CursorColumn = { link = "CursorLine" },
+        ColorColumn = { link = "CursorLine" },
+        Folded = { bg = colors.__vscode_fold_background },
+        CursorLineNr = { fg = colors.__vscode_onaction_symbol_line_foreground },
+        CursorLineSign = { link = "CursorLineNr" },
+        CursorLineFold = { link = "CursorLineNr" },
+        LineNr = { fg = colors.__vscode_inactive_symbol_line_foreground },
+        SignColumn = { link = "LinNr" },
+        FoldColumn = { link = "LinNr" },
+        MsgArea = { fg = colors.__vscode_variable },
+        ModeMsg = { link = "MsgArea" },
+        MoreMsg = { link = "ModeMsg" },
+        Question = { fg = colors.__vscode_extra_decorate_color, bold = true },
+        WarningMsg = { fg = colors.__vscode_lsp_warn },
+        ErrorMsg = { fg = colors.__vscode_lsp_error },
+        MsgSeparator = { bg = colors.__vscode_local_background },
+        QuickFixLine = { link = "ErrorMsg" },
+        DiffAdd = { fg = colors.__vscode_diff_add_foreground },
+        DiffChange = { fg = colors.__vscode_diff_change_foreground },
+        DiffDelete = { fg = colors.__vscode_diff_del_foreground },
+        DiffText = { fg = colors.__vscode_diff_text_foreground, bg = colors.__vscode_diff_text_background },
+        NonText = { fg = colors.__vscode_nontext_foreground },
+        Conceal = { link = "NonText" },
+        WinSeparator = { fg = colors.__vscode_window_spearator_color, bold = true },
+        Whitespace = { link = "NonText" },
+        Menu = { link = "NormalFloat" },
+        Pmenu = { link = "NormalFloat" },
+        PmenuSel = { bg = colors.__vscode_local_completion_selected_background },
+        PmenuSbar = { bg = colors.__vscode_local_background },
+        PmenuThumb = { bg = colors.__vscode_local_completion_scrollview_background },
+        TabLineFill = { fg = colors.__vscode_foreground, bg = colors.__vscode_local_background },
+        TabLine = { fg = colors.__vscode_inactive_table_background, bg = colors.__vscode_local_background },
+        TabLineSel = { fg = colors.__vscode_foreground },
+        SpellBad = { sp = colors.__vscode_lsp_error, undercurl = true },
+        SpellCap = { sp = colors.__vscode_lsp_warn, undercurl = true },
+        SpellLocal = { sp = colors.__vscode_lsp_info, undercurl = true },
+        SpellRare = { sp = colors.__vscode_head, undercurl = true },
+        Search = { bg = colors.__vscode_replace_search_color },
+        CurSearch = { bg = colors.__vscode_replace_search_color },
+        IncSearch = { bg = colors.__vscode_replace_search_color },
+        Substitute = { bg = colors.__vscode_replace_search_color, bold = true },
+        Directory = { fg = colors.__vscode_extra_decorate_color, bg = colors.__vscode_local_background, bold = true },
+        Title = { fg = colors.__vscode_extra_decorate_color, bold = true },
+        Winbar = { fg = colors.__vscode_variable },
+        Scrollbar = { bg = colors.__vscode_local_completion_scrollview_background },
+        StatusLine = { fg = colors.__vscode_statusline_foreground, bg = colors.__vscode_statusline_background },
+        StatusLineNC = { bg = colors.__vscode_statusline_background },
+        SpecialKey = { fg = colors.__vscode_extra_decorate_color },
+        FloatBorder = { fg = colors.__vscode_window_spearator_color },
         -- FloatShadowThrough = {},
         -- FloatShadow = {},
-        FloatBorder = { fg = colors.__vscode_window_separator },
         -- FloatTitle = {},
     }
 end

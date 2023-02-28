@@ -42,16 +42,16 @@ end
 function M.light_after(conf, colors, utils)
     utils.hl.bulk_set({
         PmenuSel = {
-            fg = colors.__vscode_curr_table_background,
-            bg = colors.__vscode_editor_menu_selected_background,
+            fg = colors.__vscode_onactive_table_background,
+            bg = colors.__vscode_local_completion_selected_background,
         },
     })
 
     if conf.expands.bufferline then
         utils.hl.bulk_set({
             BufferLineIndicatorSelected = {
-                fg = colors.__vscode_replace_mode_background,
-                bg = colors.__vscode_curr_table_background,
+                fg = colors.__vscode_replace_search_color,
+                bg = colors.__vscode_onactive_table_background,
             },
         })
     end

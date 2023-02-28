@@ -28,7 +28,7 @@ function M.link(src, dst)
     end
 end
 
--- M.link("Normal", *"fg")
+-- M.get("Normal", "fg")
 function M.get(name, option)
     local ok, rs = pcall(vim.api.nvim_get_hl_by_name, name, true)
     local kd_as = {
