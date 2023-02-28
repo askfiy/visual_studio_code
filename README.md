@@ -7,8 +7,8 @@ A `neovim` theme based on `visual studio`, written in `Lua`.
 It tries to get all the colors in `developer mode` of `vscode`, so the simulation is very high.
 
 <h3 align="center">
-<img src="./screen/dark_default.png" />
-<img src="./screen/light_defulat.png" />
+<img src="./screen/dark_default.png" width="80%" />
+<img src="./screen/light_defulat.png" width="80%" />
 </h3>
 
 ## Install and use
