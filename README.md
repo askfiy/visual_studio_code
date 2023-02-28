@@ -161,6 +161,18 @@ Also, any new `PR`s are welcome, as I'm not enthusiastic about plugin adaptation
 
 ## Additional considerations
 
+Regarding the `bufferline`, you need to make sure it has the `themable` option turned on:
+
+```lua
+
+require("bufferline").setup({
+    options = {
+        themable = true,
+        ...
+    }
+})
+```
+
 If you need to use the `vim_visual_multi` plugin adaptation, please add the following code to your `init.lua` file:
 
 ```lua
