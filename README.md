@@ -1,13 +1,19 @@
-<h5 align="center">
+# README
+
+<h3 align="center">
+Neovim Visual Studio Code Theme
+</h3>
+
+<h6>
 A `neovim` theme based on `visual studio`, written in `Lua`.
 It tries to get all the colors in `developer mode` of `vscode`, so the simulation is very high.
-</h5>
+</h6>
 
 <h6 align="center">
 <hr/>
-<img src="./screen/dark_default.png" width="80%" />
+<img src="./screen/dark.png" width="80%" />
 <hr/>
-<img src="./screen/light_default.png" width="80%" />
+<img src="./screen/light.png" width="80%" />
 </h6>
 <hr/>
 
@@ -129,6 +135,33 @@ hooks = {
 }
 ```
 
+## Additional considerations
+
+Regarding the `bufferline`, you need to make sure it has the `themable` option turned on:
+
+```lua
+
+require("bufferline").setup({
+    options = {
+        themable = true,
+        ...
+    }
+})
+```
+
+If you need to use the `vim_visual_multi` plugin adaptation, please add the following code to your `init.lua` file:
+
+```lua
+vim.g.VM_Extend_hl = "VM_Extend_hl"
+vim.g.VM_Cursor_hl = "VM_Cursor_hl"
+vim.g.VM_Mono_hl = "VM_Mono_hl"
+vim.g.VM_Insert_hl = "VM_Insert_hl"
+```
+
+If you don't use `tmux`, try running `:set cmdheight=0`.
+
+If some `nvim-web-devicons` icons do not display well in `light` mode, please tell me the name of the icon, and I will adapt it.
+
 ## Lualine integrated
 
 To quickly get a `vscode` style statusline, you need to use `lualine`:
@@ -144,8 +177,6 @@ require("lualine").setup({
         globalstatus = true,
         refresh = {
             statusline = 100,
-            tabline = 100,
-            winbar = 100,
         },
     },
     sections = require("visual_studio_code").get_lualine_sections(),
@@ -176,33 +207,6 @@ Extended plugin colors are in the `expands` directory.
 [lua/visual_studio_code/core/expands/](./lua/visual_studio_code/core/expands/)
 
 Also, any new `PR`s are welcome, as I'm not enthusiastic about plugin adaptation, so may need everyone's help to make it better..
-
-## Additional considerations
-
-Regarding the `bufferline`, you need to make sure it has the `themable` option turned on:
-
-```lua
-
-require("bufferline").setup({
-    options = {
-        themable = true,
-        ...
-    }
-})
-```
-
-If you need to use the `vim_visual_multi` plugin adaptation, please add the following code to your `init.lua` file:
-
-```lua
-vim.g.VM_Extend_hl = "VM_Extend_hl"
-vim.g.VM_Cursor_hl = "VM_Cursor_hl"
-vim.g.VM_Mono_hl = "VM_Mono_hl"
-vim.g.VM_Insert_hl = "VM_Insert_hl"
-```
-
-If you don't use `tmux`, try running `:set cmdheight=0`.
-
-If some `nvim-web-devicons` icons do not display well in `light` mode, please tell me the name of the icon, and I will adapt it.
 
 ## Screenshot
 
