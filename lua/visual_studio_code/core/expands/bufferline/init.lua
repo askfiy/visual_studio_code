@@ -115,7 +115,7 @@ function M.get_highlight(conf, colors)
         },
 
         BufferLineTabClose = {
-            bg = colors.__vscode_onactive_table_background,
+            bg = colors.__vscode_local_background,
             fg = colors.__vscode_lsp_error,
             bold = true,
         },

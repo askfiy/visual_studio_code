@@ -1,15 +1,15 @@
-# VISUAL_STUDIO_CODE
-
-## Overview
-
+<h5 align="center">
 A `neovim` theme based on `visual studio`, written in `Lua`.
-
 It tries to get all the colors in `developer mode` of `vscode`, so the simulation is very high.
+</h5>
 
-<h3 align="center">
+<h6 align="center">
+<hr/>
 <img src="./screen/dark_default.png" width="80%" />
-<img src="./screen/light_defulat.png" width="80%" />
-</h3>
+<hr/>
+<img src="./screen/light_default.png" width="80%" />
+</h6>
+<hr/>
 
 ## Install and use
 
@@ -93,6 +93,7 @@ require("visual_studio_code")
    - get_config()               -- current configuration table
    - get_colors()               -- current color highlight table
    - get_lualine_sections()     -- lualine sections table
+   - get_bufferline_right()     -- bufferline custom right area
 
 require("visual_studio_code.utils")
    - hl.set(name, options)
@@ -151,6 +152,23 @@ require("lualine").setup({
 })
 ```
 
+## Bufferline integrated
+
+要快速获取 `vscode` 右上角的几个按钮，你可以向下面这样设置 `bufferline`:
+
+```lua
+require("bufferline").setup({
+    options = {
+        themable = true,
+        close_icon = "",
+        ...
+        custom_areas = {
+            right = require("visual_studio_code").get_bufferline_right(),
+        },
+    }
+})
+```
+
 ## Extension
 
 Extended plugin colors are in the `expands` directory.
@@ -185,3 +203,17 @@ vim.g.VM_Insert_hl = "VM_Insert_hl"
 If you don't use `tmux`, try running `:set cmdheight=0`.
 
 If some `nvim-web-devicons` icons do not display well in `light` mode, please tell me the name of the icon, and I will adapt it.
+
+## Screenshot
+
+<h6 align="center">
+<hr/>
+<img src="./screen/dark01.png" width="80%" />
+<hr/>
+<img src="./screen/light01.png" width="80%" />
+<hr/>
+<img src="./screen/dark02.png" width="80%" />
+<hr/>
+<img src="./screen/light02.png" width="80%" />
+<hr/>
+</h6>

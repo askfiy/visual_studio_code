@@ -72,9 +72,13 @@ function M.get_colors()
     return M._colors
 end
 
--- Vscode statusline customized for `lualine` plugin
+-- VScode statusline customized for `lualine` plugin
 function M.get_lualine_sections()
-    return require("visual_studio_code.extra.lualine.sections")
+    return require("visual_studio_code.extra.lualine.sections")(M.get_config(), M.get_colors())
+end
+
+function M.get_bufferline_right()
+    return require("visual_studio_code.extra.bufferline.right")(M.get_config(), M.get_colors())
 end
 
 return M

@@ -61,8 +61,8 @@ end
 
 -- M.bulk_set({
 --     Normal = { fg = "#000000", bg = "#1E1E2E"},
---     NormalFloat = { link = "Normal", bold = true },
---     Cursor = { bg = "#0FE1EE" }
+--     NormalFloat = { link = "Normal" },
+--     Cursor = { bg = "#0FE1EE", bold = true }
 -- })
 function M.bulk_set(groups)
     if not vim.tbl_isempty(groups) then
