@@ -18,14 +18,14 @@ Install via `Lazy`:
 ```lua
 -- lazy
 {
-    "askfiy/visual_studio_code"
+    "askfiy/visual_studio_code",
     priority = 100,
     config = function()
         require("visual_studio_code").setup({
             mode = "dark",
         })
     end,
-}
+},
 ```
 
 Install via `Packer`:
