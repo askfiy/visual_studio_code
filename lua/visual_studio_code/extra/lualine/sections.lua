@@ -65,7 +65,8 @@ return function(conf, colors)
             {
                 "decorate",
                 fmt = function(content, context)
-                    return "   "
+                    -- 
+                    return "   "
                 end,
             },
         },

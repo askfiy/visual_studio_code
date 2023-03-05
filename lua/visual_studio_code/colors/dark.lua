@@ -12,7 +12,7 @@ return {
     __vscode_fold_background = "#202D39",
     __vscode_nontext_foreground = "#3D3E3D",
     __vscode_statusline_background = "#007ACC",
-    __vscode_statusline_foreground = "#D4D4D4",
+    __vscode_statusline_foreground = "#FFFFFF",
     __vscode_other_word_highlight_background = "#474747",
     __vscode_winbar_foreground = "#969696",
     __vscode_diff_add_foreground = "#487E02",

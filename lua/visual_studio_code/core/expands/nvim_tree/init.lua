@@ -25,6 +25,10 @@ function M.get_highlight(conf, colors)
         NvimTreeGitDeleted = { fg = colors.__vscode_git_stage_deleted_foreground },
         NvimTreeGitIgnored = { fg = colors.__vscode_git_ignore_foreground },
         NvimTreeBookmark = { fg = colors.__vscode_extra_decorate_color },
+        NvimTreeWindowPicker = {
+            fg = colors.__vscode_statusline_foreground,
+            bg = colors.__vscode_statusline_background,
+        },
     }
 end
 
