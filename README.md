@@ -63,6 +63,7 @@ local default_config = {
     -- Whether to apply the adapted plugin
     expands = {
         hop = true,
+        dbui = true,
         lazy = true,
         aerial = true,
         fidget = true,
@@ -80,6 +81,7 @@ local default_config = {
         nvim_treesitter = true,
         nvim_ts_rainbow = true,
         nvim_scrollview = true,
+        nvim_ts_rainbow2 = true,
         indent_blankline = true,
         vim_visual_multi = true,
     },
