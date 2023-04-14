@@ -60,7 +60,7 @@ function M.get_viml_highlight(conf, colors)
         FoldColumn = { link = "LinNr" },
         MsgArea = { fg = colors.__vscode_variable },
         ModeMsg = { link = "MsgArea" },
-        MoreMsg = { link = "ModeMsg" },
+        MoreMsg = { fg = colors.__vscode_statusline_background },
         Question = { fg = colors.__vscode_extra_decorate_color, bold = true },
         WarningMsg = { fg = colors.__vscode_lsp_warn },
         ErrorMsg = { fg = colors.__vscode_lsp_error },
