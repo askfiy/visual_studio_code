@@ -30,7 +30,7 @@ end
 
 -- M.get("Normal", "fg")
 function M.get(name, option)
-    local ok, rs = pcall(vim.api.nvim_get_hl_by_name, name, true)
+    local ok, rs = pcall(vim.api.nvim_get_hl, name, true)
     local kd_as = {
         foreground = "fg",
         background = "bg",
