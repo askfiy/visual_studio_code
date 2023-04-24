@@ -23,6 +23,7 @@ function M.get_highlight(conf, colors)
         DiagnosticUnderlineWarn = { underline = true, sp = colors.__vscode_lsp_warn },
         DiagnosticUnderlineInformation = { underline = true, sp = colors.__vscode_lsp_info },
         DiagnosticUnderlineHint = { underline = true, sp = colors.__vscode_lsp_hint },
+        DiagnosticUnnecessary = { fg = colors.__vscode_unused_color },
         LspInfoBorder = { fg = colors.__vscode_window_spearator_color, bold = true },
         LspSignatureActiveParameter = { fg = colors.__vscode_extra_decorate_color, bold = true },
     }

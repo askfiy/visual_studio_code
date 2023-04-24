@@ -59,4 +59,5 @@ return {
     __vscode_bracket_level_01_foreground = "#0431FA",
     __vscode_bracket_level_02_foreground = "#319331",
     __vscode_bracket_level_03_foreground = "#7B3814",
+    __vscode_unused_color = "#808080",
 }
