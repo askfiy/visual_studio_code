@@ -9,7 +9,7 @@ function M.get_highlight(conf, colors)
         ["conceal"] = {},
         ["@text.underline"] = { fg = colors.__vscode_number },
         ["@text.reference"] = { fg = colors.__vscode_diff_text_foreground },
-        ["@text.uri"] = { fg = colors.__vscode_number },
+        ["@text.uri"] = { fg = colors.__vscode_comment },
         ["@text.title"] = { fg = colors.__vscode_keyword, bold = true },
         ["@text.todo"] = { fg = colors.__vscode_todo_foreground, bg = colors.__vscode_todo_background },
         ["@comment"] = { fg = colors.__vscode_comment },
