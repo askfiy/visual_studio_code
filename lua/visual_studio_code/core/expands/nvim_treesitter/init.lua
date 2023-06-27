@@ -77,7 +77,7 @@ function M.get_highlight(conf, colors)
 
         -- MD
         ["@punctuation.special.markdown"] = { fg = colors.__vscode_keyword },
-        ["@label.markdown"] = {fg = colors.__vscode_inactive_table_foreground },
+        ["@label.markdown"] = { fg = colors.__vscode_inactive_table_foreground },
 
         -- HTML
         ["@constant.html"] = { fg = colors.__vscode_variable },
@@ -89,6 +89,9 @@ function M.get_highlight(conf, colors)
 
         -- LUA
         ["@function.builtin.lua"] = { fg = colors.__vscode_methods },
+
+        -- RUST
+        ["@function.macro.rust"] = { fg = colors.__vscode_file },
     }
 end
 
