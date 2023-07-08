@@ -26,6 +26,7 @@ function M.get_highlight(conf, colors)
         DiagnosticUnnecessary = { fg = colors.__vscode_unused_color },
         LspInfoBorder = { fg = colors.__vscode_window_spearator_color, bold = true },
         LspSignatureActiveParameter = { fg = colors.__vscode_extra_decorate_color, bold = true },
+        LspInlayHint = { fg = colors.__vscode_inactive_table_foreground },
     }
 end
 
