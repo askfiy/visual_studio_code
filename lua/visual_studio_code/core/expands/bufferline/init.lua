@@ -7,6 +7,10 @@ function M.get_highlight(conf, colors)
         BufferLineFill = {
             bg = colors.__vscode_local_background,
         },
+        BufferLineTruncMarker = {
+            fg = colors.__vscode_inactive_table_foreground,
+            bg = colors.__vscode_onactive_table_background ,
+        },
         BufferLineBufferSelected = {
             fg = colors.__vscode_onactive_table_foreground,
             bg = colors.__vscode_onactive_table_background,
