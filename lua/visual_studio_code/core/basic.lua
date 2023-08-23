@@ -109,4 +109,22 @@ function M.get_highlight(conf, colors)
     return vim.tbl_deep_extend("force", M.get_viml_highlight(conf, colors), M.get_syntax_highlight(conf, colors))
 end
 
+--- init terminal color ---
+vim.g.terminal_color_0 = "#6E6C7E"
+vim.g.terminal_color_1 = "#F28FAD"
+vim.g.terminal_color_2 = "#ABE9B3"
+vim.g.terminal_color_3 = "#FAE3B0"
+vim.g.terminal_color_4 = "#96CDFB"
+vim.g.terminal_color_5 = "#F5C2E7"
+vim.g.terminal_color_6 = "#89DCEB"
+vim.g.terminal_color_7 = "#D9E0EE"
+vim.g.terminal_color_8 = "#988BA2"
+vim.g.terminal_color_9 = "#F28FAD"
+vim.g.terminal_color_10 = "#ABE9B3"
+vim.g.terminal_color_11 = "#FAE3B0"
+vim.g.terminal_color_12 = "#96CDFB"
+vim.g.terminal_color_13 = "#F5C2E7"
+vim.g.terminal_color_14 = "#89DCEB"
+vim.g.terminal_color_15 = "#D9E0EE"
+
 return M
