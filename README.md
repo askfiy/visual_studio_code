@@ -5,7 +5,7 @@ Neovim Visual Studio Code Theme
 </h3>
 
 <h6>
-A `neovim` theme based on `visual studio`, written in `Lua`.
+A `neovim` theme based on `visual studio code`, written in `Lua`.
 It tries to get all the colors in `developer mode` of `vscode`, so the simulation is very high.
 </h6>
 
