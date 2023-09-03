@@ -27,9 +27,7 @@ Install via `Lazy`:
     "askfiy/visual_studio_code",
     priority = 100,
     config = function()
-        require("visual_studio_code").setup({
-            mode = "dark",
-        })
+        vim.cmd([[colorscheme visual_studio_code]])
     end,
 },
 ```
@@ -41,19 +39,17 @@ Install via `Packer`:
 {
     "askfiy/visual_studio_code",
     config = function()
-        require("visual_studio_code").setup({
-            mode = "dark",
-        })
+        vim.cmd([[colorscheme visual_studio_code]])
     end,
 }
 ```
 
 ## Default configuration
 
-Default config:
+Default config, modify any option via `setup()`:
 
 ```lua
-local default_config = {
+require("visual_studio_code").setup({
     -- `dark` or `light`
     mode = "dark",
     -- Whether to load all color schemes
@@ -89,7 +85,7 @@ local default_config = {
         before = function(conf, colors, utils) end,
         after = function(conf, colors, utils) end,
     },
-}
+})
 ```
 
 ## Related functions

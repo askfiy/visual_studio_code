@@ -92,7 +92,7 @@ function M.get_viml_highlight(conf, colors)
         Substitute = { bg = colors.__vscode_replace_search_color, bold = true },
         Directory = { fg = colors.__vscode_extra_decorate_color, bg = colors.__vscode_local_background, bold = true },
         Title = { fg = colors.__vscode_extra_decorate_color, bold = true },
-        Winbar = { fg = colors.__vscode_variable },
+        WinBar = { fg = colors.__vscode_variable },
         Scrollbar = { bg = colors.__vscode_local_completion_scrollview_background },
         StatusLine = { fg = colors.__vscode_statusline_foreground, bg = colors.__vscode_statusline_background },
         StatusLineNC = { bg = colors.__vscode_statusline_background },
