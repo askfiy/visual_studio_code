@@ -11,7 +11,10 @@ function M.get_highlight(conf, colors)
         ["@text.reference"] = { fg = colors.__vscode_diff_text_foreground },
         ["@text.uri"] = { fg = colors.__vscode_comment },
         ["@text.title"] = { fg = colors.__vscode_keyword, bold = true },
-        ["@text.todo"] = { fg = colors.__vscode_todo_foreground, bg = colors.__vscode_todo_background },
+        ["@text.todo"] = {
+            fg = colors.__vscode_todo_foreground,
+            bg = colors.__vscode_todo_background,
+        },
         ["@comment"] = { fg = colors.__vscode_comment },
         ["@punctuation"] = { fg = colors.__vscode_variable },
         ["@punctuation.bracket"] = { fg = colors.__vscode_variable },
@@ -67,9 +70,23 @@ function M.get_highlight(conf, colors)
         ["@tag.delimiter"] = { fg = colors.__vsocode_tag_warpper_foreground },
         ["@tag.attribute"] = { fg = colors.__vscode_diff_text_foreground },
 
+        -- CSS
+        ["@type.css"] = { fg = colors.__vscode_methods },
+        ["@property.css"] = { fg = colors.__vscode_diff_text_foreground },
+        ["@punctuation.bracket.css"] = {
+            fg = colors.__vscode_bracket_level_01_foreground,
+        },
+        ["@punctuation.delimiter.css"] = {
+            fg = colors.__vscode_methods,
+        },
+
         -- TS
-        ["@type.typescript"] = { fg = colors.__vscode_typescript_type_foreground },
-        ["@property.typescript"] = { fg = colors.__vscode_typescript_type_foreground },
+        ["@type.typescript"] = {
+            fg = colors.__vscode_typescript_type_foreground,
+        },
+        ["@property.typescript"] = {
+            fg = colors.__vscode_typescript_type_foreground,
+        },
         ["@punctuation.special.typescript"] = { fg = colors.__vscode_keyword },
 
         -- JS
