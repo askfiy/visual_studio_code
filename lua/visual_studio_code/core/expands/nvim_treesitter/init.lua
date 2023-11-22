@@ -109,6 +109,9 @@ function M.get_highlight(conf, colors)
 
         -- RUST
         ["@function.macro.rust"] = { fg = colors.__vscode_file },
+
+        -- JSON5
+        ["@keyword.json5"] = { link = "@label.json"}
     }
 end
 

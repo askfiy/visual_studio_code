@@ -98,9 +98,10 @@ function M.get_viml_highlight(conf, colors)
         StatusLineNC = { bg = colors.__vscode_statusline_background },
         SpecialKey = { fg = colors.__vscode_extra_decorate_color },
         FloatBorder = { fg = colors.__vscode_window_spearator_color },
+        FloatTitle = { fg = colors.__vscode_extra_decorate_color},
+        FloatFooter = { fg = colors.__vscode_extra_decorate_color}
         -- FloatShadowThrough = {},
         -- FloatShadow = {},
-        -- FloatTitle = {},
     }
 end
 

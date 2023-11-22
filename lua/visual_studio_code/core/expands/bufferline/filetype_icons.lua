@@ -127,6 +127,7 @@ return {
     "Coffee",
     "ClojureDart",
     "Json",
+    "Jsonc",
     "Vim",
     "Fennel",
     "Zshrc",
