@@ -30,7 +30,8 @@ end
 
 -- M.get("Normal", "fg")
 function M.get(name, option)
-    local ok, rs = pcall(vim.api.nvim_get_hl, name, true)
+    local ok, rs = pcall(vim.api.nvim_get_hl, 0, { name = name })
+    vim.print(ok, rs)
     local kd_as = {
         foreground = "fg",
         background = "bg",
@@ -65,13 +66,17 @@ end
 --     Cursor = { bg = "#0FE1EE", bold = true }
 -- })
 function M.bulk_set(groups)
+    local link_group = {}
     if not vim.tbl_isempty(groups) then
         for name, options in pairs(groups) do
             if not options.link then
                 M.set(name, options)
             else
-                M.link(name, options.link)
+                link_group[name] = options.link
             end
+        end
+        for src, dst in pairs(link_group) do
+            M.link(src, dst)
         end
     end
 end
