@@ -34,6 +34,7 @@ return {
     "Bat",
     "DesktopEntry",
     "Py",
+    "Pyi",
     "Default",
     "Clojure",
     "Fsharp",
