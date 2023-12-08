@@ -111,7 +111,25 @@ function M.get_highlight(conf, colors)
         ["@function.macro.rust"] = { fg = colors.__vscode_file },
 
         -- JSON5
-        ["@keyword.json5"] = { link = "@label.json"}
+        ["@keyword.json5"] = { link = "@label.json" },
+
+        -- REGEX
+        ---@diagnostic disable-next-line: duplicate-index
+        ["@string.regex"] = {
+            link = "@string",
+        },
+        ["@variable.builtin.regex"] = {
+            fg = colors.__vscode_file,
+        },
+        ["@punctuation.bracket.regex"] = {
+            fg = colors.__vscode_keyword,
+        },
+        ["@property.regex"] = {
+            fg = colors.__vscode_keyword,
+        },
+        ["@operator.regex"] = {
+            fg = colors.__vscode_file,
+        },
     }
 end
 
