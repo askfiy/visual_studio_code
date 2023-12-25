@@ -8,7 +8,6 @@ local default_config = {
         dbui = true,
         lazy = true,
         aerial = true,
-        fidget = true,
         null_ls = true,
         nvim_cmp = true,
         gitsigns = true,

@@ -7,7 +7,7 @@ function M.get_highlight(conf, colors)
         NvimTreeRootFolder = { fg = colors.__vscode_extra_decorate_color },
         NvimTreeFolderName = { fg = colors.__vscode_tree_fonts_foreground },
         NvimTreeFolderIcon = { fg = colors.__vscode_tree_icons_foreground },
-        NvimTreeEmptyFolderName = { link = "vimTreeFolderName" },
+        NvimTreeEmptyFolderName = { link = "NvimTreeFolderName" },
         NvimTreeOpenedFolderName = { link = "NvimTreeFolderName" },
         NvimTreeExecFile = { link = "NvimTreeFolderName" },
         NvimTreeOpenedFile = { link = "NvimTreeFolderName" },
