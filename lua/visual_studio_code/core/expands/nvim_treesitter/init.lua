@@ -130,6 +130,53 @@ function M.get_highlight(conf, colors)
         ["@operator.regex"] = {
             fg = colors.__vscode_file,
         },
+
+        -- https://github.com/nvim-treesitter/nvim-treesitter/commit/1ae9b0e4558fe7868f8cda2db65239cfb14836d0
+
+        -- " tree-sitter "standard capture names"
+        ["@variable.parameter"] = { link = "@parameter" },
+        ["@variable.member"] = { link = "@field" },
+        ["@module"] = { link = "@namespace" },
+        ["@number.float"] = { link = "@float" },
+        ["@string.special.symbol"] = { link = "@symbol" },
+        ["@string.regexp"] = { link = "@string.regex" },
+        ["@markup.strong"] = { link = "@text.strong" },
+        ["@markup.italic"] = { link = "@text.emphasis" },
+        ["@markup.underline"] = { link = "@text.underline" },
+        ["@markup.strikethrough"] = { link = "@text.strike" },
+        ["@markup.heading"] = { link = "@text.title" },
+        ["@markup.quote"] = { link = "@text.quote" },
+        ["@markup.link.url"] = { link = "@text.uri" },
+        ["@markup.math"] = { link = "@text.math" },
+        ["@markup.environment"] = { link = "@text.environment" },
+        ["@markup.environment.name"] = { link = "@text.environment.name" },
+        ["@markup.link"] = { link = "@text.reference" },
+        ["@markup.raw"] = { link = "@text.literal" },
+        ["@markup.raw.block"] = { link = "@text.literal.block" },
+        ["@markup.link.label"] = { link = "@string.special" },
+        ["@markup.list"] = { link = "@punctuation.special" },
+
+        -- " Helix captures
+        ["@function.method"] = { link = "@method" },
+        ["@function.method.call"] = { link = "@method.call" },
+        ["@comment.todo"] = { link = "@text.todo" },
+        ["@comment.error"] = { link = "@text.danger" },
+        ["@comment.warning"] = { link = "@text.warning" },
+        ["@comment.hint"] = { link = "@text.note" },
+        ["@comment.info"] = { link = "@text.note" },
+        ["@comment.note"] = { link = "@text.note" },
+        ["@comment.ok"] = { link = "@text.note" },
+        ["@diff.plus"] = { link = "@text.diff.add" },
+        ["@diff.minus"] = { link = "@text.diff.delete" },
+        ["@diff.delta"] = { link = "@text.diff.change" },
+        ["@string.special.url"] = { link = "@text.uri" },
+        ["@keyword.storage"] = { link = "@storageclass" },
+        ["@keyword.directive"] = { link = "@define" },
+        ["@keyword.conditional"] = { link = "@conditional" },
+        ["@keyword.debug"] = { link = "@debug" },
+        ["@keyword.exception"] = { link = "@exception" },
+        ["@keyword.import"] = { link = "@include" },
+        ["@keyword.repeat"] = { link = "@repeat" },
     }
 end
 
