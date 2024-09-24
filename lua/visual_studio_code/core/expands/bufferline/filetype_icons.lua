@@ -1,4 +1,5 @@
 return {
+    "http",
     "Pyd",
     "Yaml",
     "GitConfig",
